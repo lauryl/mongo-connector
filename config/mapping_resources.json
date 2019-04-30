@@ -2,52 +2,52 @@
   "dynamic": false,
   "properties": {
     "typeId": {
-      "type": "string",
-      "index": "not_analyzed"
+      "type": "text",
+      "index": true
     },
     "experimentId": {
-      "type": "string",
-      "index": "not_analyzed"
+      "type": "text",
+      "index": true
     },
     "runId": {
-      "type": "string",
-      "index": "not_analyzed"
+      "type": "text",
+      "index": true
     },
     "name": {
-      "type": "string",
+      "type": "text",
       "fields": {
         "nostem": {
-          "type": "string",
+          "type": "text",
           "analyzer": "nonword",
           "index_options": "docs"
         },
         "ngram_resource": {
-          "type": "string",
+          "type": "text",
           "analyzer": "entity_name",
           "index_options": "docs"
         },
         "edge_ngram_resource": {
-          "type": "string",
+          "type": "text",
           "analyzer": "autocomplete1",
           "index_options": "docs"
         }
       }
     },
     "label": {
-      "type": "string",
+      "type": "text",
       "fields": {
         "nostem": {
-          "type": "string",
+          "type": "text",
           "analyzer": "nonword",
           "index_options": "docs"
         },
         "ngram_resource": {
-          "type": "string",
+          "type": "text",
           "analyzer": "entity_name",
           "index_options": "docs"
         },
         "edge_ngram_resource": {
-          "type": "string",
+          "type": "text",
           "analyzer": "autocomplete1",
           "index_options": "docs"
         }
@@ -59,8 +59,8 @@
     "accessibleTo": {
       "properties": {
         "_id": {
-          "type": "string",
-          "index": "not_analyzed"
+          "type": "keyword",
+          "index": true
         }
       }
     },
